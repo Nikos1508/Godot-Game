@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://de1obmgfo6u3c"]
+
+[ext_resource type="Script" path="res://scripts/WorldGen.gd" id="1_8volu"]
+[ext_resource type="Texture2D" uid="uid://bnwe27g48ik4p" path="res://assets/tiles2.png" id="1_82wo8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t26pe"]
+texture = ExtResource("1_82wo8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+1:3/0 = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fpjvu"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Land"
+terrain_set_0/terrain_0/color = Color(1, 0, 1, 1)
+sources/0 = SubResource("TileSetAtlasSource_t26pe")
+
+[node name="Tiles" type="Node2D"]
+script = ExtResource("1_8volu")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_fpjvu")
+format = 2
